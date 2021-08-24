@@ -47,6 +47,8 @@ services:
     image: redis:alpine
     restart: always
   panel:
+    labels:
+      shipyard.route: '/'
     image: ghcr.io/pterodactyl/panel:latest
     restart: always
     ports:
